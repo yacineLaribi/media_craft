@@ -242,6 +242,9 @@ grid-row-gap: 0px;
 
   .section2{
       width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
   .form{
     width: 90vw;
