@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Media Craft</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" height="50" width="50" alt="Media Craft" class="logo">
+        <a href="#register">
+            <button class="button-56">Register Now</button>
+        </a>
+    </header>
+    <main>
+        <div class="section1">
+            <div class="left">
+                <img src="logo2.png" height="600">
+            </div>
+            <div class="right">
+                <h1>Unleach Your Creativity at <span>MEDIA CRAFT</span></h1>
+                <h2>May 7,2024 - May 9,2024</h2>
+                <p>Challenge Your Creative Skills in Rapid Prototyping and Design Thinking!
+                    Unlock Your Potential to Create Something Extraordinary.</p>
+                <a href="#register">
+                    <button class="button-56">Register</button>
+                </a>        
+    </div>
+        </div>
+        <div class="section2" id="register">
+            <form class="form" method="post">
+                <div class="title">Welcome,<br><span>Join us to compete in this event</span></div>
+                <input type="text" placeholder="First name" name="firstname" class="input">
+                <input type="text" placeholder="Last name" name="lastname" class="input">
+                
+                <input type="email" placeholder="Email" name="mail" class="input">
+                <input type="number" placeholder="Phone Number" name="phone" class="input">
+                <input type="url" placeholder="Link of portfolio" name="major" class="input">
+                <input type="text" placeholder="Skills ..."  name="skills" class="input">
+                    
+                <button class="button-confirm" id="sub">Let`s go →</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const form = document.querySelector("form");
+        let j;
+        j = 0;
+        form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.getElementById("sub").innerHTML = "submitting...";
+        if (j == 0) {
+            let data = new FormData(form);
+            fetch(
+            "https://script.google.com/macros/s/AKfycbwOyiC82KoE6i94buVA0XX10nm-qG5jDQBQlPaSUb9sOoWUK9yffwp_bgU9IzR2n_W4/exec",
+            {
+                method: "POST",
+                body: data,
+            }
+            )
+            .then((res) => res.text())
+            .then((data) => {
+                j = j + 1;
+                console.log(data);
+                document.querySelector("#sub").innerHTML = data;
+                console.log(j);
+            });
+        } else {
+            document.getElementById("sub").innerHTML = "Already registered!";
+        }
+        });
+    </script>
+</body>
+</html>
