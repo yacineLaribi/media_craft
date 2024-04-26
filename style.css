@@ -241,9 +241,10 @@ grid-row-gap: 0px;
 @media (max-width: 768px) {
 
   .section2{
-      width: 90vw;
+      width: 100vw;
   }
   .form{
+    width: 90vw;
     grid-template-columns: auto;
 
   }
