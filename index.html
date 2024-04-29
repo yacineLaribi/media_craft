@@ -28,17 +28,17 @@
                 </a>        
     </div>
         </div>
-        <div class="section2" id="register">
+        <div class="section2" id="register">    
             <form class="form" method="post">
                 <div class="title">Welcome,<br><span>Join us to compete in this event</span></div>
-                <input type="text" placeholder="First name" name="firstname" class="input">
-                <input type="text" placeholder="Last name" name="lastname" class="input">
-                
-                <input type="email" placeholder="Email" name="mail" class="input">
-                <input type="number" placeholder="Phone Number" name="phone" class="input">
-                <input type="url" placeholder="Link of portfolio" name="major" class="input">
-                <input type="text" placeholder="Skills ..."  name="skills" class="input">
-                    
+                <input type="text" placeholder="First name" name="firstname" class="input" required>
+                <input type="text" placeholder="Last name" name="lastname" class="input" required>
+                <input type="email" placeholder="Email" name="mail" class="input" required>
+                <input type="number" placeholder="Phone Number" name="phone" class="input" required>
+                <input type="url" placeholder="Link of portfolio" name="major" class="input" required>
+                <input type="text" placeholder="Skills ..."  name="skills" class="input" required>
+                <input type="text" placeholder="Do you have a team ?"  name="team" class="input" required>
+                <input type="text" placeholder="Team Name ..."  name="teamname" class="input">
                 <button class="button-confirm" id="sub">Let`s go →</button>
             </form>
         </div>
@@ -53,7 +53,7 @@
         if (j == 0) {
             let data = new FormData(form);
             fetch(
-            "https://script.google.com/macros/s/AKfycbwOyiC82KoE6i94buVA0XX10nm-qG5jDQBQlPaSUb9sOoWUK9yffwp_bgU9IzR2n_W4/exec",
+            "https://script.google.com/macros/s/AKfycbxS5tAcYVAVJKDBK9HQuosiLEPf7mvYwPPYzlODJPFcILF33TF6II3KXXMNC9qkGHJH/exec",
             {
                 method: "POST",
                 body: data,

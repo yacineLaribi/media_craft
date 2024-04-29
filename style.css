@@ -231,24 +231,27 @@ h2{
 display: grid;
 
 grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(5, 1fr);
+grid-template-rows: repeat(7, 1fr);
 grid-column-gap:2rem;
 grid-row-gap: 0px;
 } 
-.title { grid-area: 1 / 1 / 2 / 3; } 
-.button-confirm { grid-area: 5 / 1 / 6 / 3; } 
-
+  
+@media (min-width: 768px) {
+.title { grid-area: 1 / 1 / 2 / 3; }
+.button-confirm { grid-area: 7 / 1 / 6 / 3; } 
+}
 @media (max-width: 768px) {
 
   .section2{
-      width: 100vw;
+      width: 90vw;
       display: flex;
       align-items: center;
       justify-content: center;
   }
   .form{
-    width: 90vw;
+    width: 100%;
     grid-template-columns: auto;
+    grid-row-gap:1rem;
 
   }
   .input{
